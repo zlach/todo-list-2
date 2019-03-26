@@ -47,9 +47,9 @@ function listEntries(){
 
     if (todo_array.length !== 0) {
         for(var i = 0; i < todo_array.length; i++) {
-            var iDiv = document.createElement('div');
+            var iDiv = document.createElement('li');
             iDiv.className = 'entry';
-            iDiv.innerHTML = todo_array[i] + `<button class='x' onclick='remove(${i})'>X</button>`;
+            iDiv.innerHTML = `<button class='x' onclick='remove(${i})'>X</button>` + todo_array[i];
             document.querySelector("#entries").appendChild(iDiv);
         }
     }

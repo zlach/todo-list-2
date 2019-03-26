@@ -2,18 +2,19 @@
 <html>
     <head>
         <title>To Do List 2</title>
+        <link rel="stylesheet" type="text/css" href="animate.css">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <form id="todo-form" onsubmit="return doEntry();">
-            <div>
-                To Do: <input type="text" id="task-input">
+            <div class="animated fadeInUp">
+                To Do: <input type="text" id="task-input" autofocus>
                 <button type="submit" id="submit-btn">Submit</button>
             </div>
         </form>
-        <div id="entries">
+        <ol id="entries">
 
-        </div>
+        </ol>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

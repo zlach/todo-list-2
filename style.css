@@ -5,3 +5,29 @@ form{
     transform: translateX(-50%);
 }
 
+.entry{
+    font-size: 2rem;
+    display:flex;
+    align-items:center;
+}
+
+.entry button{
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 50%;
+    margin: 0px 10px;
+    outline:none;
+    transition:all, 0.3s;
+}
+
+.entry button:hover{
+    background-color:#fa2600;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 50%;
+    margin: 0px 10px;
+    outline:none;
+}
