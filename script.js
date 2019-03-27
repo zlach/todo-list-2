@@ -34,11 +34,21 @@ function doEntry(){
 
         listEntries();
 
+        // listEntries(todo_item)
+
         todo_item.value = "";
     }
 
     return false;
 }
+
+// function listEntries(todo_item){
+//     var iDiv = document.createElement('li');
+//     iDiv.className = 'entry animated bounceInLeft';
+//     iDiv.innerHTML = `<button class='x' onclick='remove(${i})'>X</button>` + todo_item;
+//     document.querySelector("#entries").appendChild(iDiv);
+// }
+
 
 function listEntries(){
     var list = document.getElementById("entries")
@@ -48,7 +58,7 @@ function listEntries(){
     if (todo_array.length !== 0) {
         for(var i = 0; i < todo_array.length; i++) {
             var iDiv = document.createElement('li');
-            iDiv.className = 'entry';
+            iDiv.className = 'entry animated bounceInLeft';
             iDiv.innerHTML = `<button class='x' onclick='remove(${i})'>X</button>` + todo_array[i];
             document.querySelector("#entries").appendChild(iDiv);
         }
@@ -59,7 +69,22 @@ function remove(item){
 
     todo_array.splice(item, 1);
 
-    listEntries();
+    listImmobileEntries();
+}
+
+function listImmobileEntries(){
+    var list = document.getElementById("entries")
+
+    list.innerHTML = '';
+
+    if (todo_array.length !== 0) {
+        for(var i = 0; i < todo_array.length; i++) {
+            var iDiv = document.createElement('li');
+            iDiv.className = 'entry animated';
+            iDiv.innerHTML = `<button class='x' onclick='remove(${i})'>X</button>` + todo_array[i];
+            document.querySelector("#entries").appendChild(iDiv);
+        }
+    }
 }
 
 // function returnEntry(todo_item){
